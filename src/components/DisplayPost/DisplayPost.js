@@ -10,14 +10,14 @@ const DisplayPost = () => {
         fetch(url)
         .then(res =>res.json())
         .then(data =>setPost(data))
-    },[])
+    },[btnId])
     const [comments,setComments]=useState({});
     useEffect(()=>{
         const url=`https://jsonplaceholder.typicode.com/comments?postId=${btnId}`
         fetch(url)
         .then(res =>res.json())
         .then(data =>setComments(data))
-    },[])
+    },[btnId])
 
     
     return (
